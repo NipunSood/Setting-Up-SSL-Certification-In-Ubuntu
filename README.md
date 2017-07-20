@@ -19,26 +19,26 @@
 4. sudo nano "filename" 
 5. Replace the code :
 
-<VirtualHost *:443>
-	ServerAdmin admin@domainname.com
-	DocumentRoot /var/www/html
-	Servername domainname.com
-	SSLEngine on
-	SSLCertificateFile /etc/ssl/filename.crt
-	SSLCertificatekeyFile /etc/ssl/filename.key
-	SSLCertificateChainFile /etc/ssl/filename.ca-bundle
-	<Directory /var/www/html>
-		AllowOverride All
-		Options FollowSymlinks
-	</Directory>
-</VirtualHost>
+*<VirtualHost *:443>
+	*ServerAdmin admin@domainname.com
+	*DocumentRoot /var/www/html
+	*Servername domainname.com
+	*SSLEngine on
+	*SSLCertificateFile /etc/ssl/filename.crt
+	*SSLCertificatekeyFile /etc/ssl/filename.key
+	*SSLCertificateChainFile /etc/ssl/filename.ca-bundle
+	*<Directory /var/www/html>
+		*AllowOverride All
+		*Options FollowSymlinks
+	*</Directory>
+*</VirtualHost>
 
-<VirtualHost *:80>
-	Servername domainname.com
-	Redirect permanent / https://domainname.com
-</VirtualHost>
+*<VirtualHost *:80>
+	*Servername domainname.com
+	*Redirect permanent / https://domainname.com
+*</VirtualHost>
 
-6. do replace domainname.com with your domain name and filename with the respective file name
+6. Do replace domainname.com with your domain name and filename with the respective file name
 
 # Reference #
 1. https://www.namecheap.com/support/knowledgebase/article.aspx/9446/0/apache-opensslmodsslnginx
