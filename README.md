@@ -1,10 +1,10 @@
-Setting Up SSL Certification In ubuntu
-##Login to your server
-#To generate a CSR run the command below in terminal:
-*openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
-*Two files will be generated on the same directry in which commands are run.
-*.csr file contains the CSR code that you need to submit during certificate activation. It can be opened with a text editor. Usually it looks like a block of code with a header: “-----BEGIN CERTIFICATE REQUEST----“ It is recommended to submit a CSR with the header and footer.
-*.key file is the Private Key, which will be used for decryption during SSL/TLS session establishment between a server and a client. It has such a header: “-----BEGIN RSA PRIVATE KEY-----“. Please make sure that the private key is saved as it will be impossible to install the certificate without it on the server afterwards.
+# Setting Up SSL Certification In ubuntu #
+## Login to your server ##
+### To generate a CSR run the command below in terminal: ###
+1. openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
+2. Two files will be generated on the same directry in which commands are run.
+3. .csr file contains the CSR code that you need to submit during certificate activation. It can be opened with a text editor. Usually it looks like a block of code with a header: “-----BEGIN CERTIFICATE REQUEST----“ It is recommended to submit a CSR with the header and footer.
+4. .key file is the Private Key, which will be used for decryption during SSL/TLS session establishment between a server and a client. It has such a header: “-----BEGIN RSA PRIVATE KEY-----“. Please make sure that the private key is saved as it will be impossible to install the certificate without it on the server afterwards.
 
 ##Get the Certificate generated for SSL Certificate Providers
 1. https://www.namecheap.com
@@ -18,7 +18,7 @@ Setting Up SSL Certification In ubuntu
 3. cp "filename" "filename2" (Only One File exits there)
 4. sudo nano "filename" 
 5. Replace the code :
-
+`code()`
 <VirtualHost *:443>
 	ServerAdmin admin@domainname.com
 	DocumentRoot /var/www/html
